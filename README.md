@@ -18,6 +18,7 @@ xcopy icon.png dist
 xcopy settings.json dist
 
 **Now you can run main.exe, it's in \dist**
+
 **Be cautious - if you move main.exe somewhere, move sounds, icon and settings with it**
 
 
