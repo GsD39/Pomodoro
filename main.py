@@ -231,7 +231,7 @@ class PomodoroApp(QMainWindow, Ui_MainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-
+    app.setStyle("Fusion")
     # Проверка на повторный запуск
     if QApplication.instance() is not None:
         app.setQuitOnLastWindowClosed(False)
