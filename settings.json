@@ -1,0 +1,13 @@
+{
+    "hotkey": "ctrl+shift+p",
+    "sounds": {
+        "work": "sounds/work.wav",
+        "short_break": "sounds/short_break.wav",
+        "long_break": "sounds/long_break.wav"
+    },
+    "times": {
+        "work": 1,
+        "short_break": 5,
+        "long_break": 15
+    }
+}
