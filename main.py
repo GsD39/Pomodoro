@@ -113,7 +113,7 @@ class PomodoroApp(QMainWindow, Ui_MainWindow):
         default_settings = {
             "hotkey": "ctrl+shift+p",
             "sounds": {
-                "work": "sounds/work_complete.wav",
+                "work": "sounds/work.wav",
                 "short_break": "sounds/short_break.wav",
                 "long_break": "sounds/long_break.wav"
             },
@@ -161,6 +161,9 @@ class PomodoroApp(QMainWindow, Ui_MainWindow):
         self.start_button.setText("Пауза")
         self.save_settings()
         self.timer.start()
+        self.work_duration.setDisabled(True)
+        self.short_break_duration.setDisabled(True)
+        self.long_break_duration.setDisabled(True)
 
         # Определение текущего этапа
         if not hasattr(self, 'time_left'):
@@ -231,7 +234,7 @@ class PomodoroApp(QMainWindow, Ui_MainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-
+    app.setStyle("Fusion")
     # Проверка на повторный запуск
     if QApplication.instance() is not None:
         app.setQuitOnLastWindowClosed(False)
